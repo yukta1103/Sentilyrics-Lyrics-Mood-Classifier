@@ -1,0 +1,6 @@
+\tfdf_model
+\bert_model
+\venv
+\data
+*.pkl
+*.pyc
