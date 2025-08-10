@@ -9,29 +9,33 @@ Sentilyrics is a project that classifies song lyrics into different emotional ca
 git clone https://github.com/yourusername/Sentilyrics-Lyrics-Mood-Classifier.git
 cd Sentilyrics-Lyrics-Mood-Classifier
 
-### 2. Set up the environment
+### 2. Download dataset
+https://www.kaggle.com/datasets/nikhilnayak123/5-million-song-lyrics-dataset
+
+### 3. Set up the environment
 Create and activate a Python virtual environment (optional but recommended):
 python -m venv venv
 venv\Scripts\activate
 
-### 3. Install dependencies
+Add dataset to a new folder at the root called data
+
+### 4. Install dependencies
 pip install -r requirements.txt
 
-### 4. Run Exploratory Data Analysis
+### 5. Run Exploratory Data Analysis
 jupyter notebook notebooks/exploratory.ipynb
 
-### 5. Train the model
+### 6. Train the model
 TF-IDF Model: 
 python src/train.py --model tfidf --data data/labeled_emotions.csv
 
 BERT Model:
 python src/train.py --model bert --data data/labeled_emotions.csv
 
-### 6. Run for predictions
+### 7. Run for predictions
 python src/inference.py --model_type tfidf --model_path model.pkl --vectorizer_path vectorizer.pkl --input_file src/input_texts.txt
 
-### 7. Launch the streamlit web app
-streamlit run app/app.py
+
 
 
 
